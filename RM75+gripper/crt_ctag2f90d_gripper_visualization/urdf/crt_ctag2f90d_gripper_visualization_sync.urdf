@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="crt_ctag2f90d_gripper_visualization">
+  <link name="base" />
+  
+  <link name="base_link">
+    <inertial>
+      <origin xyz="3.84872289645122E-06 -4.41448135187968E-05 0.0553867866771657" rpy="0 0 0" />
+      <mass value="0.953455976099042" />
+      <inertia ixx="0.00177628843801648" ixy="-8.19676071724033E-10" ixz="-3.00472546877836E-08" iyy="0.00187418176115802" iyz="-3.98009757950365E-07" izz="0.000875448946929789" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://crt_ctag2f90d_gripper_visualization/meshes/base_link.STL" />
+      </geometry>
+      <material name=""><color rgba="0.615686274509804 0.63921568627451 0.674509803921569 1" /></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" /><geometry><mesh filename="package://crt_ctag2f90d_gripper_visualization/meshes/base_link.STL" /></geometry>
+    </collision>
+  </link>
+
+  <joint name="base_link_Joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="base_link" />
+  </joint>
+
+  <link name="Left_1_Link">
+    <visual><geometry><mesh filename="package://crt_ctag2f90d_gripper_visualization/meshes/Left_1_Link.STL" /></geometry></visual>
+    <collision><geometry><mesh filename="package://crt_ctag2f90d_gripper_visualization/meshes/Left_1_Link.STL" /></geometry></collision>
+  </link>
+
+  <joint name="Left_1_Joint" type="revolute">
+    <origin xyz="0.030141 0 0.10415" rpy="1.5708 0 0" />
+    <parent link="base_link" />
+    <child link="Left_1_Link" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.91" upper="0" effort="10" velocity="10" />
+  </joint>
+
+  <link name="Left_Support_Link">
+    <visual><geometry><mesh filename="package://crt_ctag2f90d_gripper_visualization/meshes/Left_Support_Link.STL" /></geometry></visual>
+    <collision><geometry><mesh filename="package://crt_ctag2f90d_gripper_visualization/meshes/Left_Support_Link.STL" /></geometry></collision>
+  </link>
+
+  <joint name="Left_Support_Joint" type="revolute">
+    <origin xyz="0.040359 0.037365 0" rpy="0 0 0" />
+    <parent link="Left_1_Link" />
+    <child link="Left_Support_Link" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="10" />
+    <mimic joint="Left_1_Joint" multiplier="-1" offset="0" />
+  </joint>
+
+  <link name="Left_2_Link">
+    <visual><geometry><mesh filename="package://crt_ctag2f90d_gripper_visualization/meshes/Left_2_Link.STL" /></geometry></visual>
+  </link>
+  <joint name="Left_2_Joint" type="revolute">
+    <origin xyz="0.016 0 0.121" rpy="1.5708 0 0" />
+    <parent link="base_link" />
+    <child link="Left_2_Link" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="10" />
+    <mimic joint="Left_1_Joint" multiplier="1" offset="0" />
+  </joint>
+
+  <link name="Right_1_Link">
+    <visual><geometry><mesh filename="package://crt_ctag2f90d_gripper_visualization/meshes/Right_1_Link.STL" /></geometry></visual>
+    <collision><geometry><mesh filename="package://crt_ctag2f90d_gripper_visualization/meshes/Right_1_Link.STL" /></geometry></collision>
+  </link>
+
+  <joint name="Right_1_Joint" type="revolute">
+    <origin xyz="-0.030141 0 0.10415" rpy="1.5708 0 3.1416" />
+    <parent link="base_link" />
+    <child link="Right_1_Link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="10" />
+    <mimic joint="Left_1_Joint" multiplier="-1" offset="0" />
+  </joint>
+
+  <link name="Right_Support_Link">
+    <visual><geometry><mesh filename="package://crt_ctag2f90d_gripper_visualization/meshes/Right_Support_Link.STL" /></geometry></visual>
+    <collision><geometry><mesh filename="package://crt_ctag2f90d_gripper_visualization/meshes/Right_Support_Link.STL" /></geometry></collision>
+  </link>
+
+  <joint name="Right_Support_Joint" type="revolute">
+    <origin xyz="0.040359 0.037365 0" rpy="0 0 0" />
+    <parent link="Right_1_Link" />
+    <child link="Right_Support_Link" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="10" />
+    <mimic joint="Left_1_Joint" multiplier="-1" offset="0" />
+  </joint>
+
+  <link name="Right_2_Link">
+    <visual><geometry><mesh filename="package://crt_ctag2f90d_gripper_visualization/meshes/Right_2_Link.STL" /></geometry></visual>
+  </link>
+  <joint name="Right_2_Joint" type="revolute">
+    <origin xyz="-0.016 0 0.121" rpy="1.5708 0 3.1416" />
+    <parent link="base_link" />
+    <child link="Right_2_Link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="10" />
+    <mimic joint="Left_1_Joint" multiplier="-1" offset="0" />
+  </joint>
+</robot>
