@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="lift2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.010039 0.0013761 0.04956"
+        rpy="0 0 0" />
+      <mass
+        value="21.045" />
+      <inertia
+        ixx="1.70029164"
+        ixy="-0.00073232"
+        ixz="-0.03255532"
+        iyy="1.70804910"
+        iyz="-0.00688370"
+        izz="0.97173287" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel1">
+    <inertial>
+      <origin
+        xyz="0.035966 2.6831E-06 8.693E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.5746" />
+      <inertia
+        ixx="0.00142306"
+        ixy="0.00000000"
+        ixz="0.00000000"
+        iyy="0.00084449"
+        iyz="0.00000002"
+        izz="0.00084474" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/wheel1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/wheel1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="continuous">
+    <origin
+      xyz="0.15361 0.29246 -0.093"
+      rpy="0 0 1.0472" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="17"
+      velocity="27" />
+  </joint>
+  <link
+    name="wheel2">
+    <inertial>
+      <origin
+        xyz="0.035966 2.8161E-06 7.9768E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.5746" />
+      <inertia
+        ixx="0.00142306"
+        ixy="0.00000000"
+        ixz="0.00000000"
+        iyy="0.00084449"
+        iyz="0.00000002"
+        izz="0.00084474" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/wheel2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/wheel2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="continuous">
+    <origin
+      xyz="0.15361 -0.29245 -0.093"
+      rpy="0 0 -1.0472" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="17"
+      velocity="27" />
+  </joint>
+  <link
+    name="wheel3">
+    <inertial>
+      <origin
+        xyz="-0.035971 2.8084E-06 -1.6209E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.5746" />
+      <inertia
+        ixx="0.00142306"
+        ixy="0.00000000"
+        ixz="0.00000000"
+        iyy="0.00084449"
+        iyz="0.00000002"
+        izz="0.00084474" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/wheel3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/wheel3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="continuous">
+    <origin
+      xyz="-0.35293 0 -0.093"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel3" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      effort="17"
+      velocity="27" />
+  </joint>
+  <link
+    name="body4">
+    <inertial>
+      <origin
+        xyz="-0.053315 -0.00061422 -0.0086454"
+        rpy="0 0 0" />
+      <mass
+        value="14.181" />
+      <inertia
+        ixx="0.32744849"
+        ixy="-0.00306617"
+        ixz="0.05920163"
+        iyy="0.36541112"
+        iyz="0.00117932"
+        izz="0.49616592" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/body4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/body4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="prismatic">
+    <origin
+      xyz="0.094118 0.0010067 0.27"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="body4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.46"
+      effort="400"
+      velocity="0.15" />
+  </joint>
+  <link
+    name="left_link11">
+    <inertial>
+      <origin
+        xyz="0.0054231 -0.0080289 0.017086"
+        rpy="0 0 0" />
+      <mass
+        value="0.066982" />
+      <inertia
+        ixx="0.00008086"
+        ixy="0.00000207"
+        ixz="-0.00000876"
+        iyy="0.00003211"
+        iyz="0.00000440"
+        izz="0.00007702" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint11"
+    type="revolute">
+    <origin
+      xyz="0.059949 0.25 0.0245"
+      rpy="0 0 0" />
+    <parent
+      link="body4" />
+    <child
+      link="left_link11" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.094"
+      upper="3.1416"
+      effort="27"
+      velocity="5.5" />
+  </joint>
+  <link
+    name="left_link12">
+    <inertial>
+      <origin
+        xyz="-0.13234 -0.0040166 0.00010941"
+        rpy="0 0 0" />
+      <mass
+        value="1.1068" />
+      <inertia
+        ixx="0.00054299"
+        ixy="-0.00000184"
+        ixz="0.00003884"
+        iyy="0.01652639"
+        iyz="-0.00000035"
+        izz="0.01654931" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint12"
+    type="revolute">
+    <origin
+      xyz="0.02 0 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="left_link11" />
+    <child
+      link="left_link12" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="3.665"
+      effort="27"
+      velocity="5.5" />
+  </joint>
+  <link
+    name="left_link13">
+    <inertial>
+      <origin
+        xyz="0.18544 -0.00071369 0.051628"
+        rpy="0 0 0" />
+      <mass
+        value="0.54316" />
+      <inertia
+        ixx="0.00036398"
+        ixy="-0.00002814"
+        ixz="-0.00039418"
+        iyy="0.00422770"
+        iyz="-0.00001179"
+        izz="0.00419421" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.98431 0.96471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint13"
+    type="revolute">
+    <origin
+      xyz="-0.264 3E-05 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_link12" />
+    <child
+      link="left_link13" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="3.24"
+      effort="27"
+      velocity="5.5" />
+  </joint>
+  <link
+    name="left_link14">
+    <inertial>
+      <origin
+        xyz="0.039966 -0.0043045 0.035006"
+        rpy="0 0 0" />
+      <mass
+        value="0.11827" />
+      <inertia
+        ixx="0.00019329"
+        ixy="-0.00001619"
+        ixz="-0.00008654"
+        iyy="0.00023401"
+        iyz="-0.00001744"
+        izz="0.00014391" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link14.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link14.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint14"
+    type="revolute">
+    <origin
+      xyz="0.245 -3E-05 0.056"
+      rpy="0 0 0" />
+    <parent
+      link="left_link13" />
+    <child
+      link="left_link14" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.671"
+      upper="1.671"
+      effort="7"
+      velocity="20" />
+  </joint>
+  <link
+    name="left_link15">
+    <inertial>
+      <origin
+        xyz="0.0029491 8.4086E-05 -0.054795"
+        rpy="0 0 0" />
+      <mass
+        value="0.67398" />
+      <inertia
+        ixx="0.00092704"
+        ixy="0.00000049"
+        ixz="0.00004559"
+        iyy="0.00091568"
+        iyz="0.00000053"
+        izz="0.00028327" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link15.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link15.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint15"
+    type="revolute">
+    <origin
+      xyz="0.06775 0 0.0845"
+      rpy="0 0 0" />
+    <parent
+      link="left_link14" />
+    <child
+      link="left_link15" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.671"
+      upper="1.671"
+      effort="7"
+      velocity="20" />
+  </joint>
+  <link
+    name="left_link16">
+    <inertial>
+      <origin
+        xyz="0.040212 3.4542E-05 -0.010225"
+        rpy="0 0 0" />
+      <mass
+        value="0.34667" />
+      <inertia
+        ixx="0.00047210"
+        ixy="-0.00000041"
+        ixz="-0.00002976"
+        iyy="0.00049011"
+        iyz="-0.00003393"
+        izz="0.00018496" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link16.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link16.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint16"
+    type="revolute">
+    <origin
+      xyz="0.02895 0 -0.0845"
+      rpy="0 0 0" />
+    <parent
+      link="left_link15" />
+    <child
+      link="left_link16" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.094"
+      upper="2.094"
+      effort="7"
+      velocity="20" />
+  </joint>
+  <link
+    name="left_link17">
+    <inertial>
+      <origin
+        xyz="-0.0060354 -0.015602 0.013499"
+        rpy="0 0 0" />
+      <mass
+        value="0.08924" />
+      <inertia
+        ixx="0.00009869"
+        ixy="-0.00000394"
+        ixz="0.00001011"
+        iyy="0.00009021"
+        iyz="0.00001113"
+        izz="0.00006849" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link17.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link17.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint17"
+    type="prismatic">
+    <origin
+      xyz="0.08397 0.02721 -0.0062702"
+      rpy="0 0 0" />
+    <parent
+      link="left_link16" />
+    <child
+      link="left_link17" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0.044"
+      effort="300"
+      velocity="0.053" />
+  </joint>
+  <link
+    name="left_link18">
+    <inertial>
+      <origin
+        xyz="-0.00581 0.015593 -0.012255"
+        rpy="0 0 0" />
+      <mass
+        value="0.089402" />
+      <inertia
+        ixx="0.00007306"
+        ixy="0.00000404"
+        ixz="-0.00001526"
+        iyy="0.00006428"
+        iyz="0.00000327"
+        izz="0.00006822" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link18.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/left_link18.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint18"
+    type="prismatic">
+    <origin
+      xyz="0.08397 -0.023638 -0.0062703"
+      rpy="0 0 0" />
+    <parent
+      link="left_link16" />
+    <child
+      link="left_link18" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0.044"
+      effort="300"
+      velocity="0.053" />
+    <mimic joint="left_joint17" multiplier="1" offset="0" />
+  </joint>
+  <link
+    name="right_link21">
+    <inertial>
+      <origin
+        xyz="0.0054231 -0.0080289 0.017086"
+        rpy="0 0 0" />
+      <mass
+        value="0.066982" />
+      <inertia
+        ixx="0.00008086"
+        ixy="0.00000207"
+        ixz="-0.00000876"
+        iyy="0.00003211"
+        iyz="0.00000440"
+        izz="0.00007702" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link21.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link21.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint21"
+    type="revolute">
+    <origin
+      xyz="0.059949 -0.25 0.0245"
+      rpy="0 0 0" />
+    <parent
+      link="body4" />
+    <child
+      link="right_link21" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.094"
+      upper="3.1416"
+      effort="27"
+      velocity="5.5" />
+  </joint>
+  <link
+    name="right_link22">
+    <inertial>
+      <origin
+        xyz="-0.13234 -0.0040166 0.00010941"
+        rpy="0 0 0" />
+      <mass
+        value="1.1068" />
+      <inertia
+        ixx="0.00054299"
+        ixy="-0.00000184"
+        ixz="0.00003884"
+        iyy="0.01652639"
+        iyz="-0.00000035"
+        izz="0.01654931" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint22"
+    type="revolute">
+    <origin
+      xyz="0.02 0 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="right_link21" />
+    <child
+      link="right_link22" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="3.665"
+      effort="27"
+      velocity="5.5" />
+  </joint>
+  <link
+    name="right_link23">
+    <inertial>
+      <origin
+        xyz="0.18544 -0.00071369 0.051628"
+        rpy="0 0 0" />
+      <mass
+        value="0.54316" />
+      <inertia
+        ixx="0.00036398"
+        ixy="-0.00002814"
+        ixz="-0.00039418"
+        iyy="0.00422770"
+        iyz="-0.00001179"
+        izz="0.00419421" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link23.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.98431 0.96471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link23.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint23"
+    type="revolute">
+    <origin
+      xyz="-0.264 3E-05 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_link22" />
+    <child
+      link="right_link23" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="3.24"
+      effort="27"
+      velocity="5.5" />
+  </joint>
+  <link
+    name="right_link24">
+    <inertial>
+      <origin
+        xyz="0.039966 -0.0043045 0.035006"
+        rpy="0 0 0" />
+      <mass
+        value="0.11827" />
+      <inertia
+        ixx="0.00019329"
+        ixy="-0.00001619"
+        ixz="-0.00008654"
+        iyy="0.00023401"
+        iyz="-0.00001744"
+        izz="0.00014391" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link24.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link24.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint24"
+    type="revolute">
+    <origin
+      xyz="0.245 -3E-05 0.056"
+      rpy="0 0 0" />
+    <parent
+      link="right_link23" />
+    <child
+      link="right_link24" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.671"
+      upper="1.671"
+      effort="7"
+      velocity="20" />
+  </joint>
+  <link
+    name="right_link25">
+    <inertial>
+      <origin
+        xyz="0.0029491 8.4086E-05 -0.054795"
+        rpy="0 0 0" />
+      <mass
+        value="0.67398" />
+      <inertia
+        ixx="0.00092704"
+        ixy="0.00000049"
+        ixz="0.00004559"
+        iyy="0.00091568"
+        iyz="0.00000053"
+        izz="0.00028327" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link25.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link25.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint25"
+    type="revolute">
+    <origin
+      xyz="0.06775 0 0.0845"
+      rpy="0 0 0" />
+    <parent
+      link="right_link24" />
+    <child
+      link="right_link25" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.671"
+      upper="1.671"
+      effort="7"
+      velocity="20" />
+  </joint>
+  <link
+    name="right_link26">
+    <inertial>
+      <origin
+        xyz="0.040212 3.4542E-05 -0.010225"
+        rpy="0 0 0" />
+      <mass
+        value="0.34667" />
+      <inertia
+        ixx="0.00047210"
+        ixy="-0.00000041"
+        ixz="-0.00002976"
+        iyy="0.00049011"
+        iyz="-0.00003393"
+        izz="0.00018496" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link26.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link26.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint26"
+    type="revolute">
+    <origin
+      xyz="0.02895 0 -0.0845"
+      rpy="0 0 0" />
+    <parent
+      link="right_link25" />
+    <child
+      link="right_link26" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.094"
+      upper="2.094"
+      effort="7"
+      velocity="20" />
+  </joint>
+  <link
+    name="right_link27">
+    <inertial>
+      <origin
+        xyz="-0.0060354 -0.015602 0.013499"
+        rpy="0 0 0" />
+      <mass
+        value="0.08924" />
+      <inertia
+        ixx="0.00009869"
+        ixy="-0.00000394"
+        ixz="0.00001011"
+        iyy="0.00009021"
+        iyz="0.00001113"
+        izz="0.00006849" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link27.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link27.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint27"
+    type="prismatic">
+    <origin
+      xyz="0.08397 0.02721 -0.0062702"
+      rpy="0 0 0" />
+    <parent
+      link="right_link26" />
+    <child
+      link="right_link27" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0.044"
+      effort="300"
+      velocity="0.053" />
+  </joint>
+  <link
+    name="right_link28">
+    <inertial>
+      <origin
+        xyz="-0.00581 0.015593 -0.012255"
+        rpy="0 0 0" />
+      <mass
+        value="0.089402" />
+      <inertia
+        ixx="0.00007306"
+        ixy="0.00000404"
+        ixz="-0.00001526"
+        iyy="0.00006428"
+        iyz="0.00000327"
+        izz="0.00006822" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link28.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lift2/meshes/right_link28.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint28"
+    type="prismatic">
+    <origin
+      xyz="0.08397 -0.023638 -0.0062703"
+      rpy="0 0 0" />
+    <parent
+      link="right_link26" />
+    <child
+      link="right_link28" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0.044"
+      effort="300"
+      velocity="0.053" />
+    <mimic joint="right_joint27" multiplier="1" offset="0" />
+  </joint>
+</robot>
